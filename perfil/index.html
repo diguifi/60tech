@@ -12,6 +12,11 @@
             background-size: cover;
             background-position: center;
             height: 150px;
+            max-width: 100%;
+        }
+
+        .imagem {
+            max-width: 100%;
         }
 
         .obrigatorio {
@@ -22,151 +27,1351 @@
   </head>
   <body style="background-color: #c2cdce;">
 
-    <div class="w-100 p-2 d-flex justify-content-center">
-        <div class="shadow w-75 p-3 rounded-3 capa">
-        </div>
-    </div>
-
-    <div class="w-100 p-2 d-flex justify-content-center">
-        <div class="shadow bg-white border-top border-5 w-75 p-3 rounded-3">
-            <h1>DIAGNÓSTICO 60TECH</h1>
-            <p></p>
-            <p>o primeiro passo para você SAIR DO LUGAR É... COMPREENDER AONDE VOCÊ ESTÁ!</p>
-            <p>Este é o objetivo desta análise!</p>
-            <p></p>
-            <p>Primeiro PARA VOCÊ e depois PARA EU SABER COMO POSSO TE AJUDAR! Desde um curso especial até conteúdos gratuitos.</p>
-            <p></p>
-            <p>Mas o meu maior desejo é que VOCÊ SE ENGAJE DE ALGUMA FORMA COM A TECNOLOGIA! Para não ficar pra trás e correr riscos sociais POR NÃO SABER LIDAR COM ELA.</p>
-            <p></p>
-            <p>Usarei minha ferramenta clínica chamada DIAGNÓSTICO 60TECH caso você deseja SABER POR ONDE COMEÇAR!</p>
-            <p></p>
-            <p>Com as perguntas abaixo você poderá me mostrar O SEU NÍVEL DE CONHECIMENTO E INTERESSE.</p>
-            <p></p>
-            <p>VAMOS MEDIR:</p>
-            <p>1. interesse</p>
-            <p>2. vontade</p>
-            <p>3. habilidades</p>
-            <p>4. possibilidades e recursos favoráveis</p>
-            <p>5. conhecimento digital</p>
-            <p></p>
-            <p>Enviarei SUA ANÁLISE para seu email COM DICAS PARA VOCÊ SE APRIMORAR! Os dados são confidenciais.</p>
-        </div>
-    </div>
-
-    <div class="w-100 p-2 d-flex justify-content-center">
-        <div class="shadow bg-white w-75 p-3 rounded-3">
-            <div class="mb-3">
-                <label for="email-input" class="form-label">
-                    Email
-                    <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
-                </label>
-                <input type="email" class="form-control" id="email-input">
+    <div style="max-width: 90vw; width: 860px; margin: auto;">
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow w-75 p-3 rounded-3 capa">
             </div>
         </div>
-    </div>
-
-    <div class="w-100 p-2 d-flex justify-content-center">
-        <div class="shadow bg-white w-75 p-3 rounded-3">
-            <div class="mb-3">
-                <label class="form-label">
-                    Em que década você nasceu?
-                    <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
-                </label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="decada" id="decada-1">
-                    <label class="form-check-label" for="decada-1">
-                        1940 a 1950
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="decada" id="decada-2">
-                    <label class="form-check-label" for="decada-2">
-                        1950 a 1960
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="decada" id="decada-3">
-                    <label class="form-check-label" for="decada-3">
-                        1960 a 1970
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="decada" id="decada-4">
-                    <label class="form-check-label" for="decada-4">
-                        1970 a 1980
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="decada" id="decada-5">
-                    <label class="form-check-label" for="decada-5">
-                        1980 a 1990
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="decada" id="decada-6" checked>
-                    <label class="form-check-label" for="decada-6">
-                        nasci no séc 21
-                    </label>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="w-100 p-2 d-flex justify-content-center">
-        <div class="shadow bg-white w-75 p-3 rounded-3">
-            <div class="mb-3">
-                <label for="nome-input" class="form-label">
-                    Nome que gosta de ser chamado (a)
-                    <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
-                </label>
-                <input type="text" class="form-control" id="nome-input">
-            </div>
-        </div>
-    </div>
-
-    <div class="w-100 p-2 d-flex justify-content-center">
-        <div class="shadow bg-white w-75 p-3 rounded-3">
-            <div class="mb-3">
-                <label for="cidade-input" class="form-label">
-                    Cidade / Estado
-                    <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
-                </label>
-                <input type="text" class="form-control" id="cidade-input">
-            </div>
-        </div>
-    </div>
-
-    <div class="w-100 p-2 d-flex justify-content-center">
-        <div class="shadow bg-white w-75 p-3 rounded-3">
-            <div class="mb-3">
-                <label for="quem-input" class="form-label">
-                    Em poucas palavras, descreva quem é você (Ex: gostos, interesses, curiosidades, habilidades, medos, limitações, coisas que não gosta...)
-                    <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
-                </label>
-                <input type="text" class="form-control" id="quem-input">
-            </div>
-        </div>
-    </div>
-
-    <div class="w-100 p-2 d-flex justify-content-center">
-        <div class="shadow bg-white w-75 p-3 rounded-3">
-            <div class="mb-3">
-                <label for="capa" class="form-label">
-                    Parte 1
-                </label>
-                <div id="capa" class="d-flex justify-content-center">
-                    <img src="assets/1.png" alt="Interesse e Envolvimento">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="w-100 p-2 d-flex justify-content-center">
-        <div class="w-75">
-            <button type="button" class="btn btn-secondary" onclick="submit()">Enviar</button>
-        </div>
-    </div>
     
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white border-top border-5 w-75 p-3 rounded-3">
+                <h1>DIAGNÓSTICO 60TECH</h1>
+                <p></p>
+                <p>o primeiro passo para você SAIR DO LUGAR É... COMPREENDER AONDE VOCÊ ESTÁ!</p>
+                <p>Este é o objetivo desta análise!</p>
+                <p></p>
+                <p>Primeiro PARA VOCÊ e depois PARA EU SABER COMO POSSO TE AJUDAR! Desde um curso especial até conteúdos gratuitos.</p>
+                <p></p>
+                <p>Mas o meu maior desejo é que VOCÊ SE ENGAJE DE ALGUMA FORMA COM A TECNOLOGIA! Para não ficar pra trás e correr riscos sociais POR NÃO SABER LIDAR COM ELA.</p>
+                <p></p>
+                <p>Usarei minha ferramenta clínica chamada DIAGNÓSTICO 60TECH caso você deseja SABER POR ONDE COMEÇAR!</p>
+                <p></p>
+                <p>Com as perguntas abaixo você poderá me mostrar O SEU NÍVEL DE CONHECIMENTO E INTERESSE.</p>
+                <p></p>
+                <p>VAMOS MEDIR:</p>
+                <p>1. interesse</p>
+                <p>2. vontade</p>
+                <p>3. habilidades</p>
+                <p>4. possibilidades e recursos favoráveis</p>
+                <p>5. conhecimento digital</p>
+                <p></p>
+                <p>Enviarei SUA ANÁLISE para seu email COM DICAS PARA VOCÊ SE APRIMORAR! Os dados são confidenciais.</p>
+            </div>
+        </div>
+    
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="email-input" class="form-label">
+                        Email
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <input type="email" class="form-control" id="email-input">
+                </div>
+            </div>
+        </div>
+    
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label class="form-label">
+                        Em que década você nasceu?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="decada" id="decada-1" value="1940 a 1950">
+                        <label class="form-check-label" for="decada-1">
+                            1940 a 1950
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="decada" id="decada-2" value="1950 a 1960">
+                        <label class="form-check-label" for="decada-2">
+                            1950 a 1960
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="decada" id="decada-3" value="1960 a 1970">
+                        <label class="form-check-label" for="decada-3">
+                            1960 a 1970
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="decada" id="decada-4" value="1970 a 1980">
+                        <label class="form-check-label" for="decada-4">
+                            1970 a 1980
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="decada" id="decada-5" value="1980 a 1990">
+                        <label class="form-check-label" for="decada-5">
+                            1980 a 1990
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="decada" id="decada-6" value="nasci no séc 21" checked>
+                        <label class="form-check-label" for="decada-6">
+                            nasci no séc 21
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="nome-input" class="form-label">
+                        Nome que gosta de ser chamado (a)
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <input type="text" class="form-control" id="nome-input">
+                </div>
+            </div>
+        </div>
+    
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="cidade-input" class="form-label">
+                        Cidade / Estado
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <input type="text" class="form-control" id="cidade-input">
+                </div>
+            </div>
+        </div>
+    
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="quem-input" class="form-label">
+                        Em poucas palavras, descreva quem é você (Ex: gostos, interesses, curiosidades, habilidades, medos, limitações, coisas que não gosta...)
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <input type="text" class="form-control" id="quem-input">
+                </div>
+            </div>
+        </div>
+    
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="capa" class="form-label">
+                        Parte 1
+                    </label>
+                    <div id="capa" class="d-flex justify-content-center">
+                        <img src="assets/1.png" class="imagem" alt="Interesse e Envolvimento">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="pq-input" class="form-label">
+                        Porque você deseja saber mais sobretecnologias digitais?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <input type="text" class="form-control" id="pq-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label class="form-label">
+                        Você acredita na sua capacidade de aprendizagem?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="capacidade" id="capacidade-1" value="Sim">
+                        <label class="form-check-label" for="capacidade-1">
+                            Sim
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="capacidade" id="capacidade-2" value="Não">
+                        <label class="form-check-label" for="capacidade-2">
+                            Não
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="capacidade" id="capacidade-3" value="Quero provar que sou capaz">
+                        <label class="form-check-label" for="capacidade-3">
+                            Quero provar que sou capaz
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="confianca" class="form-label">
+                        De 01 A 10 qual o nível de sua autoconfiança para vivenciar o processo?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label><br/>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="confianca" id="confianca-1" value="1">
+                        <label class="form-check-label" for="confianca-1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="confianca" id="confianca-2" value="2">
+                        <label class="form-check-label" for="confianca-2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="confianca" id="confianca-3" value="3">
+                        <label class="form-check-label" for="confianca-3">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="confianca" id="confianca-4" value="4">
+                        <label class="form-check-label" for="confianca-4">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="confianca" id="confianca-5" value="5">
+                        <label class="form-check-label" for="confianca-5">5</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="confianca" id="confianca-6" value="6">
+                        <label class="form-check-label" for="confianca-6">6</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="confianca" id="confianca-7" value="7">
+                        <label class="form-check-label" for="confianca-7">7</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="confianca" id="confianca-8" value="8">
+                        <label class="form-check-label" for="confianca-8">8</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="confianca" id="confianca-9" value="9">
+                        <label class="form-check-label" for="confianca-9">9</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="confianca" id="confianca-10" value="10">
+                        <label class="form-check-label" for="confianca-10">10</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="motivacao" class="form-label">
+                        De 01 A 10 qual o seu nível de motivação para vivenciar o processo?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label><br/>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="motivacao" id="motivacao-1" value="1">
+                        <label class="form-check-label" for="motivacao-1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="motivacao" id="motivacao-2" value="2">
+                        <label class="form-check-label" for="motivacao-2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="motivacao" id="motivacao-3" value="3">
+                        <label class="form-check-label" for="motivacao-3">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="motivacao" id="motivacao-4" value="4">
+                        <label class="form-check-label" for="motivacao-4">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="motivacao" id="motivacao-5" value="5">
+                        <label class="form-check-label" for="motivacao-5">5</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="motivacao" id="motivacao-6" value="6">
+                        <label class="form-check-label" for="motivacao-6">6</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="motivacao" id="motivacao-7" value="7">
+                        <label class="form-check-label" for="motivacao-7">7</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="motivacao" id="motivacao-8" value="8">
+                        <label class="form-check-label" for="motivacao-8">8</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="motivacao" id="motivacao-9" value="9">
+                        <label class="form-check-label" for="motivacao-9">9</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="motivacao" id="motivacao-10" value="10">
+                        <label class="form-check-label" for="motivacao-10">10</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label class="form-label">
+                        Com relação ao objetivo para fazer parte da COMUNIDADE #60+TECH, VOCÊ:
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="participacao" id="participacao-1" value="Tem um projeto pronto que já vende">
+                        <label class="form-check-label" for="participacao-1">
+                            Tem um projeto pronto que já vende
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="participacao" id="participacao-2" value="Quer desenvolver uma ideia que já tem em mente">
+                        <label class="form-check-label" for="participacao-2">
+                            Quer desenvolver uma ideia que já tem em mente
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="participacao" id="participacao-3" value="Quer descobrir o que pode fazer para se autorrealizar">
+                        <label class="form-check-label" for="participacao-3">
+                            Quer descobrir o que pode fazer para se autorrealizar
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="participacao" id="participacao-4" value="Quer apenas aprender um pouco mais">
+                        <label class="form-check-label" for="participacao-4">
+                            Quer apenas aprender um pouco mais
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="participacao" id="participacao-5" value="Ainda não sabe direito porque está interessado/a em ser participante">
+                        <label class="form-check-label" for="participacao-5">
+                            Ainda não sabe direito porque está interessado/a em ser participante
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="participacao" id="participacao-6" value="Precisa de encontrar um lugar para se socializar">
+                        <label class="form-check-label" for="participacao-6">
+                            Precisa de encontrar um lugar para se socializar
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="participacao" id="participacao-7" value="Não sei responder">
+                        <label class="form-check-label" for="participacao-7">
+                            Não sei responder
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="capa" class="form-label">
+                        Parte 2
+                    </label>
+                    <div id="capa" class="d-flex justify-content-center">
+                        <img src="assets/2.png" class="imagem" alt="Vontade">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label class="form-label">
+                        Como você se sente na fase madura da vida?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sentimento" id="sentimento-1" value="muita energia para poder criar algo novo">
+                        <label class="form-check-label" for="sentimento-1">
+                            muita energia para poder criar algo novo
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sentimento" id="sentimento-2" value="experiente mas querendo aprender mais">
+                        <label class="form-check-label" for="sentimento-2">
+                            experiente mas querendo aprender mais
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sentimento" id="sentimento-3" value="com muita saúde e curiosidade">
+                        <label class="form-check-label" for="sentimento-3">
+                            com muita saúde e curiosidade
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sentimento" id="sentimento-4" value="cansado/a mas persistente">
+                        <label class="form-check-label" for="sentimento-4">
+                            cansado/a mas persistente
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sentimento" id="sentimento-5" value="desânimo porém tenho que fazer esforço">
+                        <label class="form-check-label" for="sentimento-5">
+                            desânimo porém tenho que fazer esforço
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sentimento" id="sentimento-6" value="nem percebi que estou na fase madura, me sinto como sempre fui">
+                        <label class="form-check-label" for="sentimento-6">
+                            nem percebi que estou na fase madura, me sinto como sempre fui
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label class="form-label">
+                        Você acredita ter boas ideias para ajudar o mundo / a sociedade / as pessoas ?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ideias" id="ideias-1" value="SIM">
+                        <label class="form-check-label" for="ideias-1">
+                            SIM
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ideias" id="ideias-2" value="NÃO">
+                        <label class="form-check-label" for="ideias-2">
+                            NÃO
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ideias" id="ideias-3" value="quero ter alguma">
+                        <label class="form-check-label" for="ideias-3">
+                            quero ter alguma
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="comunidade" class="form-label">
+                        De 01 a 10 quanto acha que esta COMUNIDADE atende sua expectativa?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label><br/>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="comunidade" id="comunidade-1" value="1">
+                        <label class="form-check-label" for="comunidade-1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="comunidade" id="comunidade-2" value="2">
+                        <label class="form-check-label" for="comunidade-2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="comunidade" id="comunidade-3" value="3">
+                        <label class="form-check-label" for="comunidade-3">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="comunidade" id="comunidade-4" value="4">
+                        <label class="form-check-label" for="comunidade-4">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="comunidade" id="comunidade-5" value="5">
+                        <label class="form-check-label" for="comunidade-5">5</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="comunidade" id="comunidade-6" value="6">
+                        <label class="form-check-label" for="comunidade-6">6</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="comunidade" id="comunidade-7" value="7">
+                        <label class="form-check-label" for="comunidade-7">7</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="comunidade" id="comunidade-8" value="8">
+                        <label class="form-check-label" for="comunidade-8">8</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="comunidade" id="comunidade-9" value="9">
+                        <label class="form-check-label" for="comunidade-9">9</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="comunidade" id="comunidade-10" value="10">
+                        <label class="form-check-label" for="comunidade-10">10</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="empenho" class="form-label">
+                        De 01 a 10 quanto acha que depende de seu empenho para que haja sucesso em aprender?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label><br/>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="empenho" id="empenho-1" value="1">
+                        <label class="form-check-label" for="empenho-1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="empenho" id="empenho-2" value="2">
+                        <label class="form-check-label" for="empenho-2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="empenho" id="empenho-3" value="3">
+                        <label class="form-check-label" for="empenho-3">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="empenho" id="empenho-4" value="4">
+                        <label class="form-check-label" for="empenho-4">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="empenho" id="empenho-5" value="5">
+                        <label class="form-check-label" for="empenho-5">5</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="empenho" id="empenho-6" value="6">
+                        <label class="form-check-label" for="empenho-6">6</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="empenho" id="empenho-7" value="7">
+                        <label class="form-check-label" for="empenho-7">7</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="empenho" id="empenho-8" value="8">
+                        <label class="form-check-label" for="empenho-8">8</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="empenho" id="empenho-9" value="9">
+                        <label class="form-check-label" for="empenho-9">9</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="empenho" id="empenho-10" value="10">
+                        <label class="form-check-label" for="empenho-10">10</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="importancia" class="form-label">
+                        De 01 a 10 qual a importância desta COMUNIDADE para você?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label><br/>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="importancia" id="importancia-1" value="1">
+                        <label class="form-check-label" for="importancia-1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="importancia" id="importancia-2" value="2">
+                        <label class="form-check-label" for="importancia-2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="importancia" id="importancia-3" value="3">
+                        <label class="form-check-label" for="importancia-3">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="importancia" id="importancia-4" value="4">
+                        <label class="form-check-label" for="importancia-4">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="importancia" id="importancia-5" value="5">
+                        <label class="form-check-label" for="importancia-5">5</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="importancia" id="importancia-6" value="6">
+                        <label class="form-check-label" for="importancia-6">6</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="importancia" id="importancia-7" value="7">
+                        <label class="form-check-label" for="importancia-7">7</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="importancia" id="importancia-8" value="8">
+                        <label class="form-check-label" for="importancia-8">8</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="importancia" id="importancia-9" value="9">
+                        <label class="form-check-label" for="importancia-9">9</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="importancia" id="importancia-10" value="10">
+                        <label class="form-check-label" for="importancia-10">10</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="capa" class="form-label">
+                        Parte 3
+                    </label>
+                    <div id="capa" class="d-flex justify-content-center">
+                        <img src="assets/3.png" class="imagem" alt="Habilidades">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="ensinar-input" class="form-label">
+                        O que você poderia ensinar para alguém a partir de seus conhecimentos e habilidades?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <input type="text" class="form-control" id="ensinar-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="conhecimento" class="form-label">
+                        De 01 a 10 quanto considera saber sobre tecnologia e redes digitais?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label><br/>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="conhecimento" id="conhecimento-1" value="1">
+                        <label class="form-check-label" for="conhecimento-1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="conhecimento" id="conhecimento-2" value="2">
+                        <label class="form-check-label" for="conhecimento-2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="conhecimento" id="conhecimento-3" value="3">
+                        <label class="form-check-label" for="conhecimento-3">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="conhecimento" id="conhecimento-4" value="4">
+                        <label class="form-check-label" for="conhecimento-4">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="conhecimento" id="conhecimento-5" value="5">
+                        <label class="form-check-label" for="conhecimento-5">5</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="conhecimento" id="conhecimento-6" value="6">
+                        <label class="form-check-label" for="conhecimento-6">6</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="conhecimento" id="conhecimento-7" value="7">
+                        <label class="form-check-label" for="conhecimento-7">7</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="conhecimento" id="conhecimento-8" value="8">
+                        <label class="form-check-label" for="conhecimento-8">8</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="conhecimento" id="conhecimento-9" value="9">
+                        <label class="form-check-label" for="conhecimento-9">9</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="conhecimento" id="conhecimento-10" value="10">
+                        <label class="form-check-label" for="conhecimento-10">10</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label class="form-label">
+                        Quando você não sabe algo, geralmente você
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="geralmente" id="geralmente-1" value="pede ajuda">
+                        <label class="form-check-label" for="geralmente-1">
+                            pede ajuda
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="geralmente" id="geralmente-2" value="pesquisa">
+                        <label class="form-check-label" for="geralmente-2">
+                            pesquisa
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="geralmente" id="geralmente-3" value="tenta fazer do seu jeito e ver se aprende no meio do caminho">
+                        <label class="form-check-label" for="geralmente-3">
+                            tenta fazer do seu jeito e ver se aprende no meio do caminho
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="geralmente" id="geralmente-4" value="aguarda o melhor momento para voltar na questão">
+                        <label class="form-check-label" for="geralmente-4">
+                            aguarda o melhor momento para voltar na questão
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="geralmente" id="geralmente-5" value="passa para outra tarefa">
+                        <label class="form-check-label" for="geralmente-5">
+                            passa para outra tarefa
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="geralmente" id="geralmente-6" value="fica irritado/a e desiste">
+                        <label class="form-check-label" for="geralmente-6">
+                            fica irritado/a e desiste
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label class="form-label">
+                        Qual o sentimento que você tem ao usar o computador ou dispositivos eletrônicos? Marque ATÉ 3 OPÇÕES!
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Curiosidade" id="usar-1">
+                        <label class="form-check-label" for="usar-1">
+                            Curiosidade
+                        </label>
+                      </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Coragem" id="usar-2">
+                        <label class="form-check-label" for="usar-2">
+                            Coragem
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Sinto felicidade por saber mexer e navegar" id="usar-3">
+                        <label class="form-check-label" for="usar-3">
+                            Sinto felicidade por saber mexer e navegar
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Audácia" id="usar-4">
+                        <label class="form-check-label" for="usar-4">
+                            Audácia
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Sinto-me com a mente jovem" id="usar-5">
+                        <label class="form-check-label" for="usar-5">
+                            Sinto-me com a mente jovem
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Não sinto nada de diferente, é natural" id="usar-6">
+                        <label class="form-check-label" for="usar-6">
+                            Não sinto nada de diferente, é natural
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Entretenimento e diversão" id="usar-7">
+                        <label class="form-check-label" for="usar-7">
+                            Entretenimento e diversão
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Saudosista me lembrando de antigos trabalhos" id="usar-8">
+                        <label class="form-check-label" for="usar-8">
+                            Saudosista me lembrando de antigos trabalhos
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Sinto-me perdendo novidades" id="usar-9">
+                        <label class="form-check-label" for="usar-9">
+                            Sinto-me perdendo novidades
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Ansiedade" id="usar-10">
+                        <label class="form-check-label" for="usar-10">
+                            Ansiedade
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Medo" id="usar-11">
+                        <label class="form-check-label" for="usar-11">
+                            Medo
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Insegurança" id="usar-12">
+                        <label class="form-check-label" for="usar-12">
+                            Insegurança
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Atrasado/a com o conhecimento" id="usar-13">
+                        <label class="form-check-label" for="usar-13">
+                            Atrasado/a com o conhecimento
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Vergonha por não saber" id="usar-14">
+                        <label class="form-check-label" for="usar-14">
+                            Vergonha por não saber
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Raiva por não entender a linguagem" id="usar-15">
+                        <label class="form-check-label" for="usar-15">
+                            Raiva por não entender a linguagem
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Perdido/a" id="usar-16">
+                        <label class="form-check-label" for="usar-16">
+                            Perdido/a
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Acho que a tecnologia não foi feita pra mim" id="usar-17">
+                        <label class="form-check-label" for="usar-17">
+                            Acho que a tecnologia não foi feita pra mim
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Sinto-me ultrapassado demais para isso" id="usar-18">
+                        <label class="form-check-label" for="usar-18">
+                            Sinto-me ultrapassado demais para isso
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="todos acima" id="usar-19">
+                        <label class="form-check-label" for="usar-19">
+                            todos acima
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label class="form-label">
+                        Com relação ao nível de facilidade ao se usar a tecnologia você sente que:
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="facilidade" id="facilidade-1" value="é fácil, aprendo rápido">
+                        <label class="form-check-label" for="facilidade-1">
+                            é fácil, aprendo rápido
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="facilidade" id="facilidade-2" value="é fácil, se eu tiver paciência e interesse">
+                        <label class="form-check-label" for="facilidade-2">
+                            é fácil, se eu tiver paciência e interesse
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="facilidade" id="facilidade-3" value="acho difícil pois há algumas limitações com a idade">
+                        <label class="form-check-label" for="facilidade-3">
+                            acho difícil pois há algumas limitações com a idade
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="facilidade" id="facilidade-4" value="acho difícil mas gosto de desafios">
+                        <label class="form-check-label" for="facilidade-4">
+                            acho difícil mas gosto de desafios
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="facilidade" id="facilidade-5" value="acho difícil e árduo">
+                        <label class="form-check-label" for="facilidade-5">
+                            acho difícil e árduo
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="capa" class="form-label">
+                        Parte 4
+                    </label>
+                    <div id="capa" class="d-flex justify-content-center">
+                        <img src="assets/4.png" class="imagem" alt="Possibilidades e recursos favoráveis">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label class="form-label">
+                        Para fazer um curso você:
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="curso" id="curso-1" value="geralmente tem tempo disponível sem precisar mexer tanto na agenda">
+                        <label class="form-check-label" for="curso-1">
+                            geralmente tem tempo disponível sem precisar mexer tanto na agenda
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="curso" id="curso-2" value="se for de seu interesse você se organiza para realizá-lo com dedicação exclusiva">
+                        <label class="form-check-label" for="curso-2">
+                            se for de seu interesse você se organiza para realizá-lo com dedicação exclusiva
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="curso" id="curso-3" value="sempre dá um jeito em meio às tarefas do dia a dia">
+                        <label class="form-check-label" for="curso-3">
+                            sempre dá um jeito em meio às tarefas do dia a dia
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="curso" id="curso-4" value="avisa a família que você estará com agenda comprometida por um tempo">
+                        <label class="form-check-label" for="curso-4">
+                            avisa a família que você estará com agenda comprometida por um tempo
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="curso" id="curso-5" value="é difícil se organizar para o curso, sempre perde uma parte">
+                        <label class="form-check-label" for="curso-5">
+                            é difícil se organizar para o curso, sempre perde uma parte
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="curso" id="curso-6" value="você é organizado/a, dá conta de realizar e colocar em prática os cursos que faz">
+                        <label class="form-check-label" for="curso-6">
+                            você é organizado/a, dá conta de realizar e colocar em prática os cursos que faz
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="curso" id="curso-7" value="se frustra pois compra e não faz">
+                        <label class="form-check-label" for="curso-7">
+                            se frustra pois compra e não faz
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label class="form-label">
+                        Ao pagar por um curso você:
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pagar" id="pagar-1" value="verifica se tem reserva financeira para isso">
+                        <label class="form-check-label" for="pagar-1">
+                            verifica se tem reserva financeira para isso
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pagar" id="pagar-2" value="se for preciso, pede emprestado">
+                        <label class="form-check-label" for="pagar-2">
+                            se for preciso, pede emprestado
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pagar" id="pagar-3" value="prefere os cursos gratuitos mesmo se não for o melhor">
+                        <label class="form-check-label" for="pagar-3">
+                            prefere os cursos gratuitos mesmo se não for o melhor
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pagar" id="pagar-4" value="se a proposta for interessante e imperdível, você aceita o valor proposto, sem negociações">
+                        <label class="form-check-label" for="pagar-4">
+                            se a proposta for interessante e imperdível, você aceita o valor proposto, sem negociações
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pagar" id="pagar-5" value="você sempre espera as ofertas">
+                        <label class="form-check-label" for="pagar-5">
+                            você sempre espera as ofertas
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pagar" id="pagar-6" value="não faço cursos pagos pela internet">
+                        <label class="form-check-label" for="pagar-6">
+                            não faço cursos pagos pela internet
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pagar" id="pagar-7" value="você sempre deixa um valor guardado para se atualizar investindo em conhecimento">
+                        <label class="form-check-label" for="pagar-7">
+                            você sempre deixa um valor guardado para se atualizar investindo em conhecimento
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label class="form-label">
+                        Por onde prefere navegar? selecione quantos quiser
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="pelo smartphone" id="navegar-1">
+                        <label class="form-check-label" for="navegar-1">
+                            pelo smartphone
+                        </label>
+                      </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="pelo computador" id="navegar-2">
+                        <label class="form-check-label" for="navegar-2">
+                            pelo computador
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="pelo tablet" id="navegar-3">
+                        <label class="form-check-label" for="navegar-3">
+                            pelo tablet
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="pela TV smart" id="navegar-4">
+                        <label class="form-check-label" for="navegar-4">
+                            pela TV smart
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="troca-input" class="form-label">
+                        De quanto em quanto tempo você troca seu aparelho celular?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <input type="text" class="form-control" id="troca-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label class="form-label">
+                        Quais dispositivos/recursos para utilizar as redes sociais você têm? marque quantos quiser.
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="celular" id="dispositivos-1">
+                        <label class="form-check-label" for="dispositivos-1">
+                            celular
+                        </label>
+                      </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="pacote de dados" id="dispositivos-2">
+                        <label class="form-check-label" for="dispositivos-2">
+                            pacote de dados
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="tablet" id="dispositivos-3">
+                        <label class="form-check-label" for="dispositivos-3">
+                            tablet
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="computador" id="dispositivos-4">
+                        <label class="form-check-label" for="dispositivos-4">
+                            computador
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="WiFi" id="dispositivos-5">
+                        <label class="form-check-label" for="dispositivos-5">
+                            WiFi
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="computador" id="dispositivos-6">
+                        <label class="form-check-label" for="dispositivos-6">
+                            smartTV
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="capa" class="form-label">
+                        Parte 5
+                    </label>
+                    <div id="capa" class="d-flex justify-content-center">
+                        <img src="assets/5.png" class="imagem" alt="Conhecimento digital">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label class="form-label">
+                        Quais redes sociais você tem conta?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="facebook" id="redes-1">
+                        <label class="form-check-label" for="redes-1">
+                            facebook
+                        </label>
+                      </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="instagram" id="redes-2">
+                        <label class="form-check-label" for="redes-2">
+                            instagram
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="youtube" id="redes-3">
+                        <label class="form-check-label" for="redes-3">
+                            youtube
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="whatsapp" id="redes-4">
+                        <label class="form-check-label" for="redes-4">
+                            whatsapp
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="pinterest" id="redes-5">
+                        <label class="form-check-label" for="redes-5">
+                            pinterest
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label class="form-label">
+                        Quais plataforma para video conferência você sabe utilizar? marque quantas quiser
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="zoom" id="video-1">
+                        <label class="form-check-label" for="video-1">
+                            zoom
+                        </label>
+                      </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="skype" id="video-2">
+                        <label class="form-check-label" for="video-2">
+                            skype
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="google meet" id="video-3">
+                        <label class="form-check-label" for="video-3">
+                            google meet
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="teams" id="video-4">
+                        <label class="form-check-label" for="video-4">
+                            teams
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label class="form-label">
+                        SeniorTECH são pessoas acima dos 50 que têm um conhecimento razoável sobre tecnologia e se mantem aprendendo sempre. Você se considera um seniorTECH?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="senior" id="senior-1" value="Sim">
+                        <label class="form-check-label" for="senior-1">
+                            Sim
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="senior" id="senior-2" value="Não">
+                        <label class="form-check-label" for="senior-2">
+                            Não
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="senior" id="senior-3" value="Não sei responder">
+                        <label class="form-check-label" for="senior-3">
+                            Não sei responder
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="tecnologia-input" class="form-label">
+                        Descreva qual a importância da tecnologia para sua vida:
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <input type="text" class="form-control" id="tecnologia-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="insight-input" class="form-label">
+                        Como você acha que a COMUNIDADE 60TECH pode te ajudar?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <input type="text" class="form-control" id="insight-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label class="form-label">
+                        PARA FINALIZAR...
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label class="form-label">
+                        Já ganhou dinheiro pela internet?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ganhou" id="ganhou-1" value="Sim">
+                        <label class="form-check-label" for="ganhou-1">
+                            Sim
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ganhou" id="ganhou-2" value="Não">
+                        <label class="form-check-label" for="ganhou-2">
+                            Não
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label class="form-label">
+                        Já comprou algum curso pela internet?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="comprou" id="comprou-1" value="Sim">
+                        <label class="form-check-label" for="comprou-1">
+                            Sim
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="comprou" id="comprou-2" value="Não">
+                        <label class="form-check-label" for="comprou-2">
+                            Não
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="horas-input" class="form-label">
+                        Quantas horas por dia (em média) você tem para se dedicar a sua aprendizagem em tecnologia e desenvolvimento?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <input type="text" class="form-control" id="horas-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="ajudar-input" class="form-label">
+                        Como você acha que posso te ajudar?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <input type="text" class="form-control" id="ajudar-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="perguntas-input" class="form-label">
+                        Quer me fazer alguma pergunta?
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <input type="text" class="form-control" id="perguntas-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="emailfinal-input" class="form-label">
+                        CONFIRME SEU EMAIL PESSOAL:
+                        <span class="obrigatorio" aria-label="Pergunta obrigatória"> *</span>
+                    </label>
+                    <input type="text" class="form-control" id="emailfinal-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="shadow bg-white w-75 p-3 rounded-3">
+                <div class="mb-3">
+                    <label for="capa" class="form-label">
+                        Que bom chegou até aqui! parabéns pela persistência e determinação.
+                    </label>
+                    <div id="capa" class="d-flex justify-content-center">
+                        <img src="assets/7.png" class="imagem" alt="Fim">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="w-100 p-2 d-flex justify-content-center">
+            <div class="w-75">
+                <button type="button" class="btn btn-secondary" onclick="submit()">Enviar</button>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
