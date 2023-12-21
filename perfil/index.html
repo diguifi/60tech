@@ -1432,7 +1432,7 @@
             emailfinal: {}
         }
 
-        function sendMail(name, email, subject, message) {
+        function sendMail(name, email, subject, perfil) {
 
             var data = {
                 service_id: 'service_od5lwyo',
@@ -1443,7 +1443,16 @@
                     'subject': subject,
                     'to_name': name,
                     'to_email': email,
-                    'message': message
+                    'message_img': perfil.image,
+                    'messageTitle': perfil.title,
+                    'message1': perfil.message1,
+                    'message2': perfil.message2,
+                    'message3': perfil.message3,
+                    'message4': perfil.message4,
+                    'message5': perfil.message5,
+                    'message6': perfil.message5,
+                    'message7': perfil.message7,
+                    'message8': perfil.message8,
                 }
             };
 
@@ -1477,24 +1486,85 @@
             document.getElementById('enviar').disabled = true
             
             const sucesso = validarEPreencherCampos()
-            const perfil = calcularPerfil()
-            
             if (sucesso) {
-                sendMail(campos.nome,campos.email,'60 Tech: Perfil',perfil)
+                const perfil = calcularPerfil()
+                sendMail(campos.nome.value,campos.email.value,'60 Tech: Perfil',perfil)
             } else {
                 document.getElementById('enviar').disabled = false
             }
         }
 
         function calcularPerfil() {
-            const confianca = document.querySelector('input[name="confianca"]:checked')?.value
-            const motivacao = document.querySelector('input[name="motivacao"]:checked')?.value
-            const comunidade = document.querySelector('input[name="comunidade"]:checked')?.value
-            const empenho = document.querySelector('input[name="empenho"]:checked')?.value
-            const importancia = document.querySelector('input[name="importancia"]:checked')?.value
-            const conhecimento = document.querySelector('input[name="conhecimento"]:checked')?.value
+            let pontos = 0
+            const confianca = campos.confianca.value
+            const motivacao = campos.motivacao.value
+            const comunidade = campos.comunidade.value
+            const empenho = campos.empenho.value
+            const importancia = campos.importancia.value
+            const conhecimento = campos.conhecimento.value
 
-            return toBase64('img-trinity')
+            if (pontos >= 80) {
+                return {message1: `Coisa alguma é limite para fazer o que se quer!`,
+                    message2: `Adora novidades, desafios e mudanças pois sempre vê oportunidade em criar algo novo, a cada dia.`,
+                    message3: `Gosta de compartilhar suas experiências com os outros afim de motivá-los ao sucesso, bem estar e autorrealização.`,
+                    message4: `É desbravador e curioso.`,
+                    message5: `Está à frente do tempo das pessoas de sua mesma faixa etária.`,
+                    message6: `A tecnologia é uma diversão.`,
+                    message7: `Série: Matrix`,
+                    message8: ``,
+                    messageTitle: `TRINITY`,
+                image: toBase64('img-trinity')}
+            }
+
+            if (pontos >= 60) {
+                return {message1: `O tempo passa rápido mas isso não importa para quem deseja evoluir.`,
+                    message2: `Aceita limites e caminha no seu ritmo sem perder a motivação para novos desafios.`,
+                    message3: `É consciente e sempre se dispõe a ajudar.`,
+                    message4: `Sente-se sábio, forte e capaz.`,
+                    message5: `A tecnologia é uma ferramenta.`,
+                    message6: `Trilogia: O senhor dos anéis`,
+                    message7: ``,
+                    message8: ``,
+                    messageTitle: `GANDALF`,
+                image: toBase64('img-gandalf')}
+            }
+
+            if (pontos >= 40) {
+                return {message1: `Pessoa que faz esforço para se manter atualizada.`,
+                    message2: `Vê importância na tecnologia e seus avanços mas não explora como poderia.`,
+                    message3: `Com muita labuta aprende coisas novas e até as coloca em prática no seu dia a dia, se for de alguma "serventia".`,
+                    message4: `Admira novidades, gosta de equipamentos novos mas tem dificuldade de pedir ajuda por alguma vaidade em aceitar limites.`,
+                    message5: `Prefere atividades fáceis.`,
+                    message6: `A tecnologia é uma desafiadora.`,
+                    message7: `Série: Indiana Jones`,
+                    message8: ``,
+                    messageTitle: `INDIANA JONES`,
+                image: toBase64('img-indiana')}
+            }
+
+            if (pontos >= 20) {
+                return {message1: `Tenta demonstrar que não está fora de moda.`,
+                    message2: `Sente necessidade de ser cuidada pelas pessoas.`,
+                    message3: `Corre atrás das informações mas no fundo no fundo não vê sentido em novidades uma `,
+                    message4: `vez que sente que já fez bastante pela vida e fica aguardando uma boa oportunidade.`,
+                    message5: `Se interessa por tecnologia apenas para se comunicar com filhos e alguns amigos.`,
+                    message6: `Gosta de se entreter com vídeos engraçados e com frequência acredita em notícias sensacionalistas ou fakenews.`,
+                    message7: `A tecnologia é uma barreira.`,
+                    message8: `Filme: Bonequinha de Luxo`,
+                    messageTitle: `BONEQUINHA DE LUXO`,
+                image: toBase64('img-bonequinha')}
+            }
+
+            return {message1: `Pessoa provinciana, não se aventura, aceita a vida como ela é.`,
+                message2: `Não se importa com as mudanças do mundo e não se preocupa com isso, pois tudo é Lei do Divino.`,
+                message3: `É pessoa muito grata pela vida que tem. Reza bastante para que todos fiquem bem. Admira os jovens.`,
+                message4: `Acha que seu tempo já passou e que agora são outros tempos.`,
+                message5: `É indiferente às novidades. Vive de boas memórias.`,
+                message6: `Para quê tecnologia?`,
+                message7: `Filme: O MÁGICO DE OZ`,
+                message8: ``,
+                messageTitle: `DOROTY`,
+            image: toBase64('img-doroty')}
         }
 
         function toBase64(imagem) {
@@ -1609,9 +1679,10 @@
                 for (var id of erros) {
                     marcarCampos(id, true)
                 }
+                return false
             }
 
-            return false
+            return true
         }
 
         function marcarCampos(id, add) {
@@ -1620,11 +1691,11 @@
                 for (const element of elements) {
                     if (add) {
                         element.classList.add("border")
-                        element.classList.add("border-3")
+                        element.classList.add("border-2")
                         element.classList.add("border-danger")
                     } else {
                         element.classList.remove("border")
-                        element.classList.remove("border-3")
+                        element.classList.remove("border-2")
                         element.classList.remove("border-danger")
                     }
                 }
