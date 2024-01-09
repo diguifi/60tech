@@ -1433,7 +1433,7 @@
         }
 
         function sendMail(name, email, subject, perfil) {
-
+            console.log(perfil)
             var data = {
                 service_id: 'service_od5lwyo',
                 template_id: 'template_b1b1zez',
@@ -1444,13 +1444,13 @@
                     'to_name': name,
                     'to_email': email,
                     'message_img': perfil.image,
-                    'messageTitle': perfil.title,
+                    'message_title': perfil.messageTitle,
                     'message1': perfil.message1,
                     'message2': perfil.message2,
                     'message3': perfil.message3,
                     'message4': perfil.message4,
                     'message5': perfil.message5,
-                    'message6': perfil.message5,
+                    'message6': perfil.message6,
                     'message7': perfil.message7,
                     'message8': perfil.message8,
                 }
@@ -1482,6 +1482,41 @@
                 });
         }
 
+        function sendAnswersGal() {
+            var data = {
+                service_id: 'service_od5lwyo',
+                template_id: 'template_znuc4sm',
+                user_id: '2HtirNj5wIpBYgPS5',
+                template_params: {
+                    'to_email': campos.email.value
+                }
+            };
+
+            const myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+
+            const requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: JSON.stringify(data),
+            };
+
+            fetch('https://api.emailjs.com/api/v1.0/email/send', requestOptions)
+                .then(response => response.text())
+                .then(result => {
+                    if (result != 'OK') {
+                        document.getElementById('formulario').style.display = 'block'
+                        document.getElementById('fim').style.display = 'none'
+                        alert('Ocorreu um erro ao enviar o formulario, tente novamente...')
+                        document.getElementById('enviar').disabled = false
+                    }
+                })
+                .catch(error => {
+                    alert('Ocorreu um erro ao enviar o formulario, tente novamente...')
+                    document.getElementById('enviar').disabled = false
+                });
+        }
+
         function submit() {
             document.getElementById('enviar').disabled = true
             
@@ -1489,6 +1524,7 @@
             if (sucesso) {
                 const perfil = calcularPerfil()
                 sendMail(campos.nome.value,campos.email.value,'60 Tech: Perfil',perfil)
+                sendAnswersGal()
             } else {
                 document.getElementById('enviar').disabled = false
             }
@@ -1496,12 +1532,14 @@
 
         function calcularPerfil() {
             let pontos = 0
-            const confianca = campos.confianca.value
-            const motivacao = campos.motivacao.value
-            const comunidade = campos.comunidade.value
-            const empenho = campos.empenho.value
-            const importancia = campos.importancia.value
-            const conhecimento = campos.conhecimento.value
+            const confianca = campos.confianca.value != undefined ? Number(campos.confianca.value) : 0
+            const motivacao = campos.motivacao.value != undefined ? Number(campos.motivacao.value) : 0
+            const comunidade = campos.comunidade.value != undefined ? Number(campos.comunidade.value) : 0
+            const empenho = campos.empenho.value != undefined ? Number(campos.empenho.value) : 0
+            const importancia = campos.importancia.value != undefined ? Number(campos.importancia.value) : 0
+            const conhecimento = campos.conhecimento.value != undefined ? Number(campos.conhecimento.value) : 0
+            pontos = confianca + motivacao + comunidade + empenho + importancia + conhecimento
+            console.log(pontos)
 
             if (pontos >= 80) {
                 return {message1: `Coisa alguma é limite para fazer o que se quer!`,
@@ -1513,7 +1551,7 @@
                     message7: `Série: Matrix`,
                     message8: ``,
                     messageTitle: `TRINITY`,
-                image: toBase64('img-trinity')}
+                image: 'https://drive.google.com/uc?export=view&id=1ihsA85er3wox_fNBhb6piVkfvLGDh8TC'}
             }
 
             if (pontos >= 60) {
@@ -1526,7 +1564,7 @@
                     message7: ``,
                     message8: ``,
                     messageTitle: `GANDALF`,
-                image: toBase64('img-gandalf')}
+                image: 'https://drive.google.com/uc?export=view&id=1CUZcrWHLNlKz54xFjVSzHBw281CxkP2-'}
             }
 
             if (pontos >= 40) {
@@ -1539,7 +1577,7 @@
                     message7: `Série: Indiana Jones`,
                     message8: ``,
                     messageTitle: `INDIANA JONES`,
-                image: toBase64('img-indiana')}
+                image: 'https://drive.google.com/uc?export=view&id=11tt56LoCAbqHkMD6fXLfx3lmLCbh_fdB'}
             }
 
             if (pontos >= 20) {
@@ -1552,7 +1590,7 @@
                     message7: `A tecnologia é uma barreira.`,
                     message8: `Filme: Bonequinha de Luxo`,
                     messageTitle: `BONEQUINHA DE LUXO`,
-                image: toBase64('img-bonequinha')}
+                image: 'https://drive.google.com/uc?export=view&id=1GC4K0SONbvrl7DX-FYqkMPgsDPrFlB91'}
             }
 
             return {message1: `Pessoa provinciana, não se aventura, aceita a vida como ela é.`,
@@ -1564,7 +1602,8 @@
                 message7: `Filme: O MÁGICO DE OZ`,
                 message8: ``,
                 messageTitle: `DOROTY`,
-            image: toBase64('img-doroty')}
+            //image: toBase64('img-doroty')}
+            image: 'https://drive.google.com/uc?export=view&id=1t5PY2dObtb1JDl-1BeA-vBnQkbg1WpEE'}
         }
 
         function toBase64(imagem) {
