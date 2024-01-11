@@ -1489,7 +1489,41 @@
                 user_id: '2HtirNj5wIpBYgPS5',
                 template_params: {
                     'to_email': campos.email.value,
-                    'decada': campos.decada.value
+                    'decada': campos.decada.value,
+                    'nome': campos.nome.value,
+                    'cidade': campos.cidade.value,
+                    'quem': campos.quem.value,
+                    'pq': campos.pq.value,
+                    'capacidade': campos.capacidade.value,
+                    'confianca': campos.confianca.value,
+                    'motivacao': campos.motivacao.value,
+                    'participacao': campos.participacao.value,
+                    'sentimento': campos.sentimento.value,
+                    'ideias': campos.ideias.value,
+                    'comunidade': campos.comunidade.value,
+                    'empenho': campos.empenho.value,
+                    'importancia': campos.importancia.value,
+                    'ensinar': campos.ensinar.value,
+                    'conhecimento': campos.conhecimento.value,
+                    'geralmente': campos.geralmente.value,
+                    'usar': retornaValoresDeCheckbox(campos.usar.value),
+                    'facilidade': campos.facilidade.value,
+                    'navegar': retornaValoresDeCheckbox(campos.navegar.value),
+                    'troca': campos.troca.value,
+                    'dispositivos': retornaValoresDeCheckbox(campos.dispositivos.value),
+                    'curso': campos.curso.value,
+                    'pagar': campos.pagar.value,
+                    'redes': retornaValoresDeCheckbox(campos.redes.value),
+                    'video': retornaValoresDeCheckbox(campos.video.value),
+                    'senior': campos.senior.value,
+                    'tecnologia': campos.tecnologia.value,
+                    'insight': campos.insight.value,
+                    'ganhou': campos.ganhou.value,
+                    'comprou': campos.comprou.value,
+                    'horas': campos.horas.value,
+                    'ajudar': campos.ajudar.value,
+                    'perguntas': campos.perguntas.value,
+                    'emailfinal': campos.emailfinal.value
                 }
             };
 
@@ -1520,7 +1554,7 @@
 
         function submit() {
             document.getElementById('enviar').disabled = true
-            
+
             const sucesso = validarEPreencherCampos()
             if (sucesso) {
                 const perfil = calcularPerfil()
@@ -1669,7 +1703,7 @@
             campos.dispositivos.value = document.querySelectorAll('input[name="dispositivos"]:checked')
             campos.dispositivos.id = "dispositivos-card"
 
-            campos.curso.value = document.querySelectorAll('input[name="curso"]:checked')
+            campos.curso.value = document.querySelector('input[name="curso"]:checked')?.value
             campos.curso.id = "curso-card"
             campos.pagar.value = document.querySelector('input[name="pagar"]:checked')?.value
             campos.pagar.id = "pagar-card"
@@ -1740,6 +1774,14 @@
                     }
                 }
             }
+        }
+
+        function retornaValoresDeCheckbox(nodes) {
+            const valores = []
+            for (const node of nodes.entries()) {
+                valores.push(node[1].defaultValue)
+            }
+            return valores.join(', ')
         }
     </script>
     </body>
